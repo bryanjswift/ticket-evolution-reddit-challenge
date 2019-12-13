@@ -11,6 +11,11 @@ Implement three (3) of the following features:
 - [ ] When the user scrolls to the bottom of the page, load the next page of images
 - [ ] Allow the user to download all images currently being displayed
 
+## Response
+
+It's ugly and I was trying to not spend _tons_ of time on it since it was meant
+to be an hour long challenge. But two and a half hours later here we are.
+
 # Create React App Generated README :point_down:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
