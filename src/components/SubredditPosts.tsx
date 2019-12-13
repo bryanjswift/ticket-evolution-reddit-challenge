@@ -11,7 +11,7 @@ interface Props {
 export function SubredditPosts(props: Props) {
   return (
     <div className="posts">
-      {props.posts.map(post => <SubredditPost {...post} />)}
+      {props.posts.map(post => <SubredditPost key={post.id} {...post} />)}
     </div>
   )
 }
