@@ -20,13 +20,16 @@ export function SubredditPosts(props: Props) {
  * Show an individual post from a subreddit.
  */
 function SubredditPost(props: Post) {
-  const { thumbnail } = props;
+  const { permalink, thumbnail } = props;
+  const link = `https://reddit.com${permalink}`;
   return (
     <div className="post">
-      <img
-        alt=""
-        src={thumbnail}
-      />
+      <a href={link}>
+        <img
+          alt=""
+          src={thumbnail}
+        />
+      </a>
     </div>
   );
 }
