@@ -26,6 +26,7 @@ function SubredditPost(props: Post) {
   return (
     <div className="post">
       <img
+        alt=""
         src={image.source.url}
         height={image.source.height}
         width={image.source.width} />
