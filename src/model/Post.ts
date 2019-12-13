@@ -23,18 +23,20 @@ type PostType = 'image' | string;
 export interface Post {
   /** Identifier for the Reddit post. */
   id: PostId;
+  /** The number of comments the post received. */
+  num_comments: number;
   /** A hint indicating probable type for the Reddit post. */
   post_hint: PostType;
   /** Information about previewing the post. */
   preview: PostPreview;
-  /** The number of upvotes the post has received. */
-  ups: number;
   /** Permalink to the post on reddit.com */
   permalink: string;
   /** Name of the subreddit to which the post belongs. */
   subreddit: string;
   /** Thumbnail for the post. */
   thumbnail: string;
+  /** The number of upvotes the post has received. */
+  ups: number;
 }
 
 /**
