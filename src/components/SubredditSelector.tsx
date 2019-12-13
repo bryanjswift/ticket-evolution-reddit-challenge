@@ -1,6 +1,5 @@
 import React, { Dispatch, FormEvent, useRef, useState } from 'react';
 import { Action } from '../Action';
-import { fetchPosts } from '../Api';
 
 interface Props {
   dispatch: Dispatch<Action>;
@@ -16,12 +15,6 @@ export function SubredditSelector(props: Props) {
       setErrors(['Subreddit must have a value']);
     } else {
       dispatch({ type: 'SelectSubreddit', subreddit: inputEl.current.value });
-      try {
-        const posts = await fetchPosts({ name: inputEl.current.value });
-        dispatch({ type: 'ReceivePosts', posts });
-      } catch (e) {
-        setErrors([e.message]);
-      }
     }
   }
   return (
