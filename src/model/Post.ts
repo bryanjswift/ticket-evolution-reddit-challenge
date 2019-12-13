@@ -31,6 +31,8 @@ export interface Post {
   ups: number;
   /** Permalink to the post on reddit.com */
   permalink: string;
+  /** Name of the subreddit to which the post belongs. */
+  subreddit: string;
 }
 
 /**
