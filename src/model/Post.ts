@@ -33,6 +33,8 @@ export interface Post {
   permalink: string;
   /** Name of the subreddit to which the post belongs. */
   subreddit: string;
+  /** Thumbnail for the post. */
+  thumbnail: string;
 }
 
 /**
