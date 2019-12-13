@@ -19,4 +19,9 @@ interface SelectSubreddit {
   subreddit: string;
 }
 
-export type Action = ClearSubreddit | ReceiveErrors | ReceivePosts | SelectSubreddit;
+interface UpdateSort {
+  type: 'UpdateSort';
+  order: string;
+}
+
+export type Action = ClearSubreddit | ReceiveErrors | ReceivePosts | SelectSubreddit | UpdateSort;
