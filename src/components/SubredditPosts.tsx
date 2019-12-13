@@ -5,6 +5,9 @@ interface Props {
   posts: Post[];
 }
 
+/**
+ * Show a "list" of posts from a subreddit.
+ */
 export function SubredditPosts(props: Props) {
   return (
     <div className="posts">
@@ -13,6 +16,9 @@ export function SubredditPosts(props: Props) {
   )
 }
 
+/**
+ * Show an individual post from a subreddit.
+ */
 function SubredditPost(props: Post) {
   const { preview } = props;
   const { images } = preview;
