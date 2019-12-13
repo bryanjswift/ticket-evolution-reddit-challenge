@@ -22,18 +22,20 @@ export function reducer(state: AppState, action: Action) {
     case 'ReceiveErrors':
       return {
         ...state,
-        isLoading: false,
         errors: action.errors,
+        isLoading: false,
       };
     case 'ReceivePosts':
       return {
         ...state,
+        errors: [],
         isLoading: false,
         posts: action.posts,
       };
     case 'SelectSubreddit':
       return {
         ...state,
+        errors: [],
         isLoading: true,
         subreddit: action.subreddit,
       };
