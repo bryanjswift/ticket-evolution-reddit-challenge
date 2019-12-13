@@ -7,7 +7,7 @@ Implement three (3) of the following features:
 
 - [ ] Allow the user to sort the images by popularity and post date
 - [x] Link the images to their post page on reddit.com
-- [ ] Display the number of upvotes and comments for each image
+- [x] Display the number of upvotes and comments for each image
 - [ ] When the user scrolls to the bottom of the page, load the next page of images
 - [ ] Allow the user to download all images currently being displayed
 
