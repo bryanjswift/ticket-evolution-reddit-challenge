@@ -22,11 +22,18 @@ function Loading() {
 }
 
 function View(props: AppState) {
-  const { isLoading, posts } = props;
+  const { errors, isLoading, posts } = props;
   if (isLoading) {
     return (<Loading />);
   } else if (posts.length === 0) {
     return (<p>No posts found.</p>);
+  } else if (errors.length > 0) {
+    return (
+      <>
+        <h2>Errors loading data</h2>
+        {errors.map(e => (<p key={e}>{e}</p>))}
+      </>
+    );
   } else {
     return (<SubredditPosts posts={posts} />);
   }
