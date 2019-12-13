@@ -23,6 +23,8 @@ type PostType = 'image' | string;
 export interface Post {
   /** Identifier for the Reddit post. */
   id: PostId;
+  /** UTC timestamp when the post was created. */
+  created_utc: number;
   /** The number of comments the post received. */
   num_comments: number;
   /** A hint indicating probable type for the Reddit post. */
