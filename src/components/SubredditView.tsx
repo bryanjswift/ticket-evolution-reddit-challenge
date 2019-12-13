@@ -22,7 +22,7 @@ function Loading() {
 }
 
 function View(props: AppState) {
-  const { errors, isLoading, posts } = props;
+  const { errors, isLoading, sortedPosts: posts } = props;
   if (isLoading) {
     return (<Loading />);
   } else if (posts.length === 0) {
