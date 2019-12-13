@@ -1,18 +1,24 @@
-import React, { FormEvent, useRef, useState } from 'react';
+import React, { Dispatch, FormEvent, useRef, useState } from 'react';
 import { Action } from '../Action';
 import { fetchPosts } from '../Api';
 
-export function SubredditSelector() {
+interface Props {
+  dispatch: Dispatch<Action>;
+}
+
+export function SubredditSelector(props: Props) {
   const inputEl = useRef<HTMLInputElement>(null);
   const [errors, setErrors] = useState<string[]>([]);
+  const { dispatch } = props;
   async function onSelectorSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (inputEl.current === null || inputEl.current.value === '') {
       setErrors(['Subreddit must have a value']);
     } else {
+      dispatch({ type: 'SelectSubreddit', subreddit: inputEl.current.value });
       try {
         const posts = await fetchPosts({ name: inputEl.current.value });
-        console.log(posts);
+        dispatch({ type: 'ReceivePosts', posts });
       } catch (e) {
         setErrors([e.message]);
       }
