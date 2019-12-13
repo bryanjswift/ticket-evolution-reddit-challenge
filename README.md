@@ -5,7 +5,7 @@ in that subreddit. You may use any libraries and frameworks you wish.
 
 Implement three (3) of the following features:
 
-- [ ] Allow the user to sort the images by popularity and post date
+- [x] Allow the user to sort the images by popularity and post date
 - [x] Link the images to their post page on reddit.com
 - [x] Display the number of upvotes and comments for each image
 - [ ] When the user scrolls to the bottom of the page, load the next page of images

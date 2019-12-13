@@ -1,4 +1,4 @@
-import React, { Dispatch } from 'react';
+import React, { ChangeEvent, Dispatch } from 'react';
 import { Action } from '../Action';
 import { AppState } from '../AppState';
 import { SubredditPosts } from './SubredditPosts';
@@ -8,10 +8,25 @@ interface Props extends AppState {
 }
 
 export function SubredditView(props: Props) {
-  const { subreddit } = props;
+  const { dispatch, subreddit } = props;
+  function updateSort(e: ChangeEvent<HTMLSelectElement>) {
+    if (e.target === null) {
+      return;
+    }
+    const value = e.target.value;
+    dispatch({ type: 'UpdateSort', order: value });
+  }
   return (
     <>
-      <h1>View Images from <code>/r/{subreddit}</code></h1>
+      <h1>Viewing Images from <code>/r/{subreddit}</code></h1>
+      <label>
+        <span>Order by:</span>
+        <select onChange={updateSort}>
+          <option value="default">Default</option>
+          <option value="popularity">Popularity</option>
+          <option value="date">Post Date (Recent First)</option>
+        </select>
+      </label>
       <View {...props} />
     </>
   );
