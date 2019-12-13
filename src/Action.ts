@@ -1,5 +1,10 @@
 import { Post } from './model/Post';
 
+interface ReceiveErrors {
+  type: 'ReceiveErrors';
+  errors: string[];
+}
+
 interface ClearSubreddit {
   type: 'ClearSubreddit';
 }
@@ -14,4 +19,4 @@ interface SelectSubreddit {
   subreddit: string;
 }
 
-export type Action = ClearSubreddit | ReceivePosts | SelectSubreddit;
+export type Action = ClearSubreddit | ReceiveErrors | ReceivePosts | SelectSubreddit;
