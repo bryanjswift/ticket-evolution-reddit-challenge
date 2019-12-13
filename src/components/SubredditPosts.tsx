@@ -20,16 +20,13 @@ export function SubredditPosts(props: Props) {
  * Show an individual post from a subreddit.
  */
 function SubredditPost(props: Post) {
-  const { preview } = props;
-  const { images } = preview;
-  const [ image ] = images;
+  const { thumbnail } = props;
   return (
     <div className="post">
       <img
         alt=""
-        src={image.source.url}
-        height={image.source.height}
-        width={image.source.width} />
+        src={thumbnail}
+      />
     </div>
   );
 }
