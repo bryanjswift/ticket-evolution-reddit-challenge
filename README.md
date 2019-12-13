@@ -1,3 +1,18 @@
+# Challenge
+
+Create a react app that accepts a subreddit name and displays the images posted
+in that subreddit. You may use any libraries and frameworks you wish.
+
+Implement three (3) of the following features:
+
+- [ ] Allow the user to sort the images by popularity and post date
+- [ ] Link the images to their post page on reddit.com
+- [ ] Display the number of upvotes and comments for each image
+- [ ] When the user scrolls to the bottom of the page, load the next page of images
+- [ ] Allow the user to download all images currently being displayed
+
+# Create React App Generated README :point_down:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
