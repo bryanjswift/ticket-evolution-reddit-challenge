@@ -12,7 +12,7 @@ type ImageId = string;
  * Value union for `post_hint` used in the `Post` interface. Returned by the
  * Reddit API.
  */
-type PostType = 'image';
+type PostType = 'image' | string;
 
 /**
  * Necessary data from the Reddit API to render and filter posts.
