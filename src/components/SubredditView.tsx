@@ -25,6 +25,8 @@ function View(props: AppState) {
   const { isLoading, posts } = props;
   if (isLoading) {
     return (<Loading />);
+  } else if (posts.length === 0) {
+    return (<p>No posts found.</p>);
   } else {
     return (<SubredditPosts posts={posts} />);
   }
